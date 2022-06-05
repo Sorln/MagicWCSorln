@@ -1,0 +1,223 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Magic V.2 Witchcraft Script      (Sorln#3037)", "DarkTheme")
+local Tab = Window:NewTab("Species")
+local Section = Tab:NewSection("Change ur Species to what you want to be <3")
+Section:NewButton("Mortal", "ButtonInfo", function()
+    print("Clicked")
+    	local ohBrickColor1 = BrickColor.new("Fossil")
+
+	game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(ohBrickColor1)
+end)
+Section:NewButton("Pagon Witch", "ButtonInfo", function()
+    print("Clicked")
+    	local ohBrickColor1 = BrickColor.new("Bright bluish green")
+
+	game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(ohBrickColor1)
+end)
+Section:NewButton("Fairy", "ButtonInfo", function()
+    print("Clicked")
+    	local ohBrickColor1 = BrickColor.new("Sea green")
+
+	game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(ohBrickColor1)
+end)
+Section:NewButton("Hex Witch", "ButtonInfo", function()
+    print("Clicked")
+    	local ohBrickColor1 = BrickColor.new("Persimmon")
+
+	game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(ohBrickColor1)
+end)
+Section:NewButton("Fallen Angel", "ButtonInfo", function()
+    print("Clicked")
+    	local ohBrickColor1 = BrickColor.new("Black")
+
+	game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(ohBrickColor1)
+end)
+Section:NewButton("Angel", "ButtonInfo", function()
+    print("Clicked")
+    	local ohBrickColor1 = BrickColor.new("Cool yellow")
+
+	game:GetService("ReplicatedStorage").Remotes.ChangeTeam:FireServer(ohBrickColor1)
+end)
+local Tab = Window:NewTab("Money")
+local Section = Tab:NewSection("Get Rich :D")
+Section:NewButton("Get $$$$", "ButtonInfo", function()
+    print("Clicked")
+    	local ohNumber1 = 999999999
+
+	game:GetService("ReplicatedStorage").Remotes.GiveCurrency:FireServer(ohNumber1)
+end)
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Improvments to Yourself")
+Section:NewSlider("WalkSpeed", "Change WalkSpeed", 300, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("JumpPower", "Change JumpPower", 250, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+Section:NewButton("Burn Your Angel wings (look at ...)", "First become a angel then show ur wings then burn", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").BurnAngelWing:FireServer()
+end)
+Section:NewButton("Get Horns", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").SpiritFused:FireServer()
+end)
+Section:NewButton("Sign Book Of The Beast for more Magic", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").HaveSigned:FireServer()
+end)
+Section:NewButton("Beam", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").TeleportBeam1:FireServer()
+end)
+Section:NewButton("Cursed Lightning", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").Lightning:FireServer()
+end)
+local Tab = Window:NewTab("World")
+local Section = Tab:NewSection("Change Things about the world around you")
+Section:NewButton("Change Moon Phases (only works at night)", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").MoonChange:FireServer()
+end)
+local Tab = Window:NewTab("TP")
+local Section = Tab:NewSection("Teleport")
+Section:NewButton("Go to Heaven", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").ToHeaven:FireServer()
+end)
+Section:NewButton("Leave Heaven", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").OutHeaven:FireServer()
+end)
+Section:NewButton("Go to Hell", "ButtonInfo", function()
+    print("Clicked")
+    game:GetService("ReplicatedStorage").ToHell:FireServer()
+end)
+local Tab = Window:NewTab("Items")
+local Section = Tab:NewSection("Get Good Items")
+Section:NewButton("Knife", "ButtonInfo", function()
+    print("Clicked")
+    local player = game.Players.LocalPlayer
+
+local rl = game.ReplicatedStorage.Knife:Clone()
+rl.Parent = player.Backpack
+end)
+Section:NewButton("Vervain", "ButtonInfo", function()
+    print("Clicked")
+    local player = game.Players.LocalPlayer
+
+local rl = game.ReplicatedStorage.Vervain:Clone()
+rl.Parent = player.Backpack
+end)
+Section:NewButton("Umbrella", "ButtonInfo", function()
+    print("Clicked")
+    local player = game.Players.LocalPlayer
+
+local rl = game.ReplicatedStorage.Umbrella:Clone()
+rl.Parent = player.Backpack
+end)
+local Tab = Window:NewTab("Shop")
+local Section = Tab:NewSection("Buy stuff with your money <3 ")
+Section:NewButton("Buy Sealing Amber", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Sealing Amber"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Health Potion", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Health Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Greater Health Potion", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Greater Health Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Jump Boost Potion", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Jump Boost Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Regeneration Potion", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Regeneration Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Swiftness Potion", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Swiftness Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Size Potion", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Size Potion"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Mind Stone", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Bought Mind Stone"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Celestial Stone", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Celestial Stone"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Dimensional Shards", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Dimensional Shards"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Nature Scroll", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Nature Scroll"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+Section:NewButton("Buy Angelic Scroll", "ButtonInfo", function()
+    print("Clicked")
+    local args = {
+    [1] = "Angelic Scroll"
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyItem:FireServer(unpack(args))
+end)
+local Tab = Window:NewTab("Admin")
+local Section = Tab:NewSection("The word Admin explains it all")
+Section:NewButton("infiniteyield", "ButtonInfo", function()
+    print("Clicked")
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
